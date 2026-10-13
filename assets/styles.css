@@ -18,7 +18,9 @@
 
 /* v0.3: verified stories / sources */
 .source-list {margin: 0 0 24px; padding-left:20px; display:grid; gap:10px;}
-.source-list 
-
---- TRUNCATED ---
-Response was ~6,126 tokens (limit: 6,000). Use more specific queries to reduce response size.
+.source-list li {line-height:1.6; overflow-wrap:anywhere;}
+.source-list a {color:#c6fd51;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;font-weight:700;}
+.source-list a:hover,.source-list a:focus-visible {color:#fff;}
+.sources-heading {font-family:var(--display, Impact, sans-serif);letter-spacing:.08em;font-size:1.22rem;margin:32px 0 12px;color:#f54c4f;}
+.card-issue{max-width:95%;}
+@media (max-width: 520px){.sources-heading{font-size:1.05rem}.source-list{padding-left:16px}}
