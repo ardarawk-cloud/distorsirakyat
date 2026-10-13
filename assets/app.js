@@ -1,150 +1,25 @@
-/* DISTORSI RAKYAT — redaksi v0.4 / 13 Oktober 2026. Static, no tracking. */
+/* DISTORSI RAKYAT v0.3 — static, no analytics, no external data requests */
 'use strict';
-const stories = [
-  {
-    id:'bbm-listrik',category:'poster',sort:'01',label:'POSTER / SATIR',date:'3 MEI 2025',
-    art:'BALI\nPERNAH\nGELAP',color:'a-red',
-    title:'BALI PERNAH BLACKOUT. TRANSISI JANGAN IKUT GELAP.',
-    excerpt:'Pemadaman luas Bali pada Mei 2025 menjadi pengingat: kendaraan listrik butuh jaringan yang tangguh.',
-    lead:'Listrik masa depan perlu infrastruktur masa depan. Tidak cukup spanduk dan colokan.',
-    paragraphs:[
-      'FAKTA — PLN menyatakan sistem kelistrikan Bali mengalami gangguan pada Jumat, 2 Mei 2025 sekitar pukul 16.00 WITA. Listrik seluruh pelanggan kembali normal pada Sabtu, 3 Mei sekitar pukul 03.30 WITA. Pemulihan kurang dari 12 jam itu merupakan hasil kerja personel PLN yang patut diapresiasi.',
-      'SATIR — Warga diminta pindah dari pompa BBM ke colokan listrik. Lalu, ketika listrik mati, apakah harus pindah lagi ke lilin? Ini kritik metaforis soal ketahanan jaringan, bukan klaim bahwa kendaraan listrik memicu pemadaman.',
-      'PERTANYAAN REDAKSI — Bagaimana jaminan kualitas jaringan, cadangan energi, dan ketersediaan pengisian daya bila pemakaian kendaraan listrik bertambah? Transisi patut didukung sekaligus diawasi.'
-    ],
-    sources:[['PLN — Seluruh pelanggan Bali kembali menyala, 3 Mei 2025','https://web.pln.co.id/cms/media/siaran-pers/2025/05/pln-berhasil-pulihkan-100-kelistrikan-bali-seluruh-pelanggan-kembali-menyala/']]
-  },
-  {
-    id:'mbg-sanitasi',category:'satir',sort:'02',label:'SATIR / KEAMANAN PANGAN',date:'7 SEPTEMBER 2026',
-    art:'1.999\nDAPUR\nDIHENTIKAN',color:'a-paper',
-    title:'MAKAN BERGIZI. DAPURNYA HARUS LULUS UJI.',
-    excerpt:'BGN menghentikan sementara 1.999 dapur MBG yang belum mendaftar SLHS pada September 2026.',
-    lead:'Gizi anak-anak bukan sekadar angka porsi. Keamanan pangan itu harga mati.',
-    paragraphs:[
-      'FAKTA — Badan Gizi Nasional mengumumkan pada 7 September 2026 bahwa 1.999 dapur Satuan Pelayanan Pemenuhan Gizi (SPPG) ditutup sementara karena belum melakukan pendaftaran Sertifikat Laik Higiene Sanitasi (SLHS). Menurut BGN, penghentian dilakukan untuk investigasi lanjutan.',
-      'PENTING — Status belum mendaftar SLHS tidak sama dengan pernyataan bahwa semua dapur itu menyebabkan keracunan. Kritik terhadap pengawasan tidak boleh mengubah data administrasi menjadi tuduhan tindak pidana.',
-      'SATIR — Kalau programnya Makan Bergizi Gratis, jangan sampai bonusnya “uji coba kebersihan”. Standar harus hadir sebelum makanan tersaji, bukan setelah sebuah masalah menjadi berita.'
-    ],
-    sources:[['BGN — Penghentian sementara 1.999 dapur belum daftar SLHS, 7 September 2026','https://www.bgn.go.id/news/foto/tegaskan-keamanan-pangan-kepala-bgn-sudaryono-resmi-tutup-sementara-1999-dapur-mbg-yang-belum-mendaftar-slhs']]
-  },
-  {
-    id:'suwung',category:'satir',sort:'03',label:'SATIR / LINGKUNGAN',date:'9 JUNI 2026',
-    art:'SAMPAH\nBUKAN\nESTAFET',color:'a-acid',
-    title:'SAMPAH DIPILAH. TANGGUNG JAWAB JANGAN DILEMPAR.',
-    excerpt:'Suwung dibatasi bagi sampah residu sejak April 2026. Transisi butuh fasilitas, bukan sekadar instruksi.',
-    lead:'Sampah memang harus diurus dari sumber. Tapi sistem setelah sumbernya juga harus siap.',
-    paragraphs:[
-      'FAKTA — Kementerian Lingkungan Hidup menjelaskan bahwa sejak 1 April 2026, TPA Suwung di Bali tidak menerima sampah organik dan diprioritaskan untuk residu. Pada 9 Juni 2026 KLH menegaskan fokus penataan adalah menghentikan praktik open dumping, bukan semata menutup total TPA.',
-      'KONTEKS — Pemilahan dan pengurangan sampah di sumber merupakan arah yang baik. Namun keberhasilan memerlukan tempat pemrosesan, pengangkutan, edukasi, pengawasan, serta informasi publik yang konsisten.',
-      'SATIR — Kalau sampah cuma pindah dari bak ke pinggir jalan lalu disebut solusi, itu bukan ekonomi sirkular. Itu jalan-jalan keliling kota tanpa tujuan.'
-    ],
-    sources:[
-      ['KLH — Pembatasan pembuangan sampah TPA Suwung, 7 April 2026','https://kemenlh.go.id/news/detail/pasca-pembatasan-pembuangan-sampah-klhbplh-inspeksi-langsung-tpa-suwung-di-bali'],
-      ['KLH — Penegasan penghentian open dumping, 9 Juni 2026','https://kemenlh.go.id/news/detail/bukan-tutup-tpa-menteri-lh-tegaskan-stop-open-dumping-dan-dorong-ekosistem-green-jobs-di-bali']
-    ]
-  },
-  {
-    id:'ombudsman',category:'editorial',sort:'04',label:'EDITORIAL / PELAYANAN PUBLIK',date:'21 JANUARI 2026',
-    art:'633\nAKSES\nWARGA',color:'a-dark',
-    title:'PELAYANAN PUBLIK BUKAN MAIN TEBAK PROSEDUR.',
-    excerpt:'Ombudsman Bali mencatat 633 akses masyarakat sepanjang 2025, dan menyelesaikan 251 laporan.',
-    lead:'Berkas warga bukan perlombaan mencari meja yang benar.',
-    paragraphs:[
-      'FAKTA — Ombudsman RI Perwakilan Bali mencatat 633 akses masyarakat selama 2025. Angka tersebut mencakup laporan, konsultasi, respons cepat, investigasi inisiatif sendiri, dan tembusan—bukan 633 kasus yang terbukti.',
-      'FAKTA — Sebanyak 260 laporan ditindaklanjuti dan 251 diselesaikan, atau 96,54%. Hasil penyelesaian ini patut diapresiasi. Ombudsman juga mencatat dugaan maladministrasi seperti tidak memberi pelayanan, penyimpangan prosedur, dan penundaan berlarut dalam laporan warga.',
-      'EDITORIAL — Standar layanan, biaya, durasi, jalur pengaduan, dan tindak lanjut mesti mudah diketahui. Warga tidak seharusnya bermain petak umpet hanya untuk mendapatkan haknya.'
-    ],
-    sources:[['Ombudsman RI Bali — Laporan Tahunan 2025, 21 Januari 2026','https://ombudsman.go.id/perwakilan/news/r/pwksiaran--ombudsman-bali-paparkan-laporan-tahunan-2025-pengawasan-pelayanan-publik']]
-  },
-  {
-    id:'anggaran',category:'satir',sort:'05',label:'SATIR / KEUANGAN PUBLIK',date:'8 OKTOBER 2026',
-    art:'ANGGARAN\nDINAS\nDIET 30%',color:'a-red2',
-    title:'PERJALANAN DINAS DIET. PELAYANAN JANGAN IKUT KURUS.',
-    excerpt:'Reuters melaporkan instruksi pengurangan 30% sisa anggaran perjalanan dinas lembaga pemerintah.',
-    lead:'Hemat itu bagus. Jangan sampai warga yang membayar kekurangannya.',
-    paragraphs:[
-      'FAKTA MENURUT REUTERS — Laporan 8 Oktober 2026 menyebut kementerian/lembaga diminta mengurangi 30% sisa anggaran perjalanan dinas dan membekukan belanja tak esensial pada sisa 2026. Reuters menyebut dokumen surat edaran dan dua sumber yang mengetahui arahan tersebut.',
-      'KONTEKS — Efisiensi dapat membantu pengendalian defisit. Persoalannya terletak pada pelaksanaan: publik memerlukan transparansi mana kegiatan seremonial yang dipangkas dan mana pelayanan yang tetap dilindungi.',
-      'SATIR — Selamat! Ternyata rapat daring sudah ditemukan sejak lama. Yang tidak boleh ikut dipangkas adalah kunjungan pelayanan darurat, pengawasan lapangan, dan hak warga.'
-    ],
-    sources:[['Reuters — Indonesia orders cost-cutting measures, 8 Oktober 2026','https://www.reuters.com/world/asia-pacific/indonesia-orders-cost-cutting-measures-keep-fiscal-deficit-check-sources-say-2026-10-08/']]
-  },
-  {
-    id:'karhutla',category:'satir',sort:'06',label:'SATIR / LINGKUNGAN',date:'13 OKTOBER 2026',
-    art:'LANGIT\nBUKAN\nASBAK!',color:'a-slate',
-    title:'LANGIT BUKAN ASBAK. ASAP TAK PUNYA PASPOR.',
-    excerpt:'Reuters melaporkan pengerahan tambahan sumber daya pemadaman karhutla di tengah kritik terhadap kabut asap.',
-    lead:'Kalau asap menyeberang batas, tanggung jawab pencegahan jangan berhenti di batas administrasi.',
-    paragraphs:[
-      'FAKTA MENURUT REUTERS — Pada 13 Oktober 2026, Presiden Prabowo Subianto memerintahkan tambahan sumber daya untuk menghadapi kebakaran hutan dan lahan. Laporan tersebut juga menyoroti meningkatnya kritik atas kabut asap dan dampaknya terhadap kualitas udara regional.',
-      'KONTEKS — Pengerahan personel dan bantuan untuk pemadaman patut diapresiasi. Publik tetap berhak meminta data penyebab, pengawasan lahan, penindakan pelanggaran yang terbukti, pemulihan lingkungan, dan perlindungan kesehatan.',
-      'SATIR — Paru-paru warga bukan filter cadangan nasional. Yang perlu dibakar adalah kebiasaan menunda pencegahan, bukan hutannya.'
-    ],
-    sources:[['Reuters — Prabowo orders more resources to fight wildfires, 13 Oktober 2026','https://www.reuters.com/business/environment/indonesias-prabowo-orders-more-resources-fight-wildfires-haze-anger-grows-2026-10-13/']]
-  }
+const stories=[
+{"id":"bbm-listrik","category":"poster","sort":"01","label":"SATIR BERBASIS FAKTA","color":"a-red","art":"BALI\nPERNAH\nGELAP","title":"BALI PERNAH BLACKOUT. TRANSISI JANGAN IKUT GELAP.","excerpt":"2 Mei 2025: Bali mengalami gangguan listrik luas. Masa depan kendaraan listrik tetap butuh jaringan yang andal.","date":"3 MEI 2025","lead":"Listrik adalah masa depan yang harus disiapkan, bukan cuma diumumkan lewat spanduk.","paras":["FAKTA — PLN menyatakan sistem kelistrikan Bali mengalami gangguan pada Jumat, 2 Mei 2025 sekitar pukul 16.00 WITA. Pemulihan penuh tercapai pada Sabtu, 3 Mei 2025 pukul 03.30 WITA, kurang dari 12 jam sejak gangguan.","SATIR — Bayangkan warga diminta menukar tangki bensin dengan colokan listrik, sementara colokannya ikut tidur saat kota gelap. Poster ini menggambarkan kemungkinan ironis, bukan laporan bahwa motor listrik menjadi penyebab atau korban khusus pemadaman tersebut.","PERTANYAAN REDAKSI — Percepatan kendaraan listrik masuk akal bila dibarengi ketahanan jaringan, harga yang terjangkau, pilihan pengisian daya, serta layanan yang tidak membuat warga menanggung risiko sendirian."],"conclusion":"MAU PINDAH KE LISTRIK? BAGUS. JARINGANNYA JANGAN IKUT CUTI.","sources":[{"name":"PLN — Pemulihan 100% kelistrikan Bali (3 Mei 2025)","url":"https://web.pln.co.id/cms/media/siaran-pers/2025/05/pln-berhasil-pulihkan-100-kelistrikan-bali-seluruh-pelanggan-kembali-menyala/"}]},
+{"id":"mbg-sanitasi","category":"satir","sort":"02","label":"SATIR / KEAMANAN PANGAN","color":"a-paper","art":"1.999\nDAPUR\nDISTOP","title":"MAKAN BERGIZI, DAPUR HARUS LULUS UJI.","excerpt":"BGN menutup sementara 1.999 dapur MBG pada September 2026 karena belum mendaftar sertifikat higiene sanitasi.","date":"7 SEP 2026","lead":"Gizi tak boleh dipisahkan dari keamanan makanan. Ini bukan urusan kemasan dan pita peresmian.","paras":["FAKTA — Pada 7 September 2026, Badan Gizi Nasional mengumumkan penutupan sementara 1.999 dapur SPPG yang belum mendaftar Sertifikat Laik Higiene Sanitasi (SLHS) di dinas kesehatan masing-masing. Ini bukan berarti seluruh dapur tersebut terbukti menyebabkan keracunan.","BGN menyatakan penutupan sementara dilakukan untuk investigasi dan penguatan keamanan pangan. Keputusan menghentikan sementara operasional patut dicatat sebagai bentuk penegakan standar.","SATIR — Menu boleh bergizi tinggi; prosedur kebersihannya jangan defisit. Anak-anak bukan panel penguji rasa untuk eksperimen standar sanitasi. Yang wajib dikejar bukan cuma jumlah porsi, tetapi pengawasan yang bisa diperiksa."],"conclusion":"GIZINYA TAMBAH. RISIKONYA JANGAN.","sources":[{"name":"BGN — Penutupan sementara 1.999 dapur SPPG (7 September 2026)","url":"https://www.bgn.go.id/news/foto/tegaskan-keamanan-pangan-kepala-bgn-sudaryono-resmi-tutup-sementara-1999-dapur-mbg-yang-belum-mendaftar-slhs"}]},
+{"id":"sampah-suwung","category":"satir","sort":"03","label":"SATIR / LINGKUNGAN","color":"a-acid","art":"SAMPAH\nJANGAN\nOPER ESTAFET","title":"SAMPAH DIPILAH. TANGGUNG JAWAB JANGAN DILEMPAR.","excerpt":"TPA Suwung dibatasi untuk residu sejak April 2026. Transisinya butuh fasilitas nyata, bukan cuma imbauan.","date":"9 JUN 2026","lead":"Mengubah cara membuang sampah itu perlu. Infrastruktur setelah pemilahan juga perlu.","paras":["FAKTA — Kementerian Lingkungan Hidup melaporkan pembatasan pembuangan ke TPA Suwung mulai 1 April 2026: sampah organik tidak lagi diterima, sedangkan residu masih dapat masuk. Pada 9 Juni 2026 kementerian menegaskan fokus kebijakan adalah penghentian praktik open dumping, bukan penutupan total TPA.","Arah pengelolaan sampah dari sumber patut didukung. Tetapi warga, pekerja angkut, desa, dan pengolah sampah memerlukan sarana pemilahan, jadwal layanan, tempat pengolahan, dan informasi yang konsisten.","SATIR — Kalau sampah cuma pindah dari bak ke pinggir jalan, itu bukan ekonomi sirkular. Itu cuma tur keliling kota tanpa tiket."],"conclusion":"SAMPAH HARUS DIPROSES. BUKAN CUMA DIPINDAHKAN MASALAHNYA.","sources":[{"name":"KLH — Inspeksi dan pembatasan TPA Suwung (7 April 2026)","url":"https://kemenlh.go.id/news/detail/pasca-pembatasan-pembuangan-sampah-klhbplh-inspeksi-langsung-tpa-suwung-di-bali"},{"name":"KLH — Klarifikasi penghentian open dumping (9 Juni 2026)","url":"https://kemenlh.go.id/news/detail/bukan-tutup-tpa-menteri-lh-tegaskan-stop-open-dumping-dan-dorong-ekosistem-green-jobs-di-bali"}]},
+{"id":"ombudsman-bali","category":"editorial","sort":"04","label":"EDITORIAL / LAYANAN PUBLIK","color":"a-dark","art":"633\nAKSES\nWARGA","title":"PELAYANAN PUBLIK BUKAN PERMAINAN TEBAK PROSEDUR.","excerpt":"Ombudsman Bali mencatat 633 akses warga sepanjang 2025; 251 dari 260 laporan yang ditindaklanjuti diselesaikan.","date":"21 JAN 2026","lead":"Antrean warga itu bukan properti dekorasi kantor pelayanan.","paras":["FAKTA — Ombudsman RI Perwakilan Bali melaporkan 633 akses masyarakat sepanjang 2025. Angka itu mencakup berbagai kanal: laporan, konsultasi, respons cepat, investigasi, dan tembusan; bukan 633 laporan kasus yang seluruhnya terbukti.","Dari 260 laporan yang ditindaklanjuti, 251 selesai (96,54%). Ini kemajuan yang patut diakui. Laporan yang masuk banyak berkaitan dengan perhubungan dan infrastruktur, sementara dugaan maladministrasi termasuk tidak memberikan pelayanan, penyimpangan prosedur, dan penundaan berlarut.","EDITORIAL — Transparansi standar layanan, waktu penyelesaian, dan jalur pengaduan perlu terlihat jelas. Warga tidak semestinya menerka harus ke meja siapa untuk memperoleh hak dasar."],"conclusion":"PELAYANAN ITU HAK, BUKAN TANTANGAN LEVEL TERAKHIR.","sources":[{"name":"Ombudsman RI Bali — Laporan Tahunan 2025 (21 Januari 2026)","url":"https://ombudsman.go.id/perwakilan/news/r/pwksiaran--ombudsman-bali-paparkan-laporan-tahunan-2025-pengawasan-pelayanan-publik"}]},
+{"id":"anggaran-diet","category":"satir","sort":"05","label":"SATIR / ANGGARAN","color":"a-red2","art":"DINAS\nDIET\n30%","title":"ANGGARAN PERJALANAN DIET. LAYANAN JANGAN IKUT KURUS.","excerpt":"Reuters melaporkan instruksi pemotongan 30% sisa anggaran perjalanan dinas pada Oktober 2026.","date":"8 OKT 2026","lead":"Memangkas biaya perjalanan bisa masuk akal. Yang harus dijaga: pelayanan ke warga.","paras":["FAKTA MENURUT REUTERS — Laporan 8 Oktober 2026 menyebut kementerian dan lembaga diminta memangkas 30% sisa anggaran perjalanan dan membekukan belanja tidak esensial selama sisa tahun, di tengah tekanan menjaga defisit anggaran dalam batas hukum. Ini adalah laporan media yang merujuk sumber, bukan hasil audit DISTORSI RAKYAT.","SATIR — Kalau uang tiket rapat bisa dikurangi, mungkin semua orang akan menemukan fitur revolusioner bernama rapat daring. Tetapi jangan sampai hemat di tiket justru membuat layanan lapangan dan bantuan warga terlambat.","PERTANYAAN REDAKSI — Mana belanja seremonial yang bisa dikurangi, mana program wajib yang harus dilindungi, dan bagaimana publik bisa menilai hasil efisiensi?"],"conclusion":"POTONG PEMBOROSAN. JANGAN POTONG HAK WARGA.","sources":[{"name":"Reuters — Indonesia orders cost-cutting measures (8 Oktober 2026)","url":"https://www.reuters.com/world/asia-pacific/indonesia-orders-cost-cutting-measures-keep-fiscal-deficit-check-sources-say-2026-10-08/"}]},
+{"id":"asap-karhutla","category":"satir","sort":"06","label":"SATIR / LINGKUNGAN","color":"a-slate","art":"LANGIT\nBUKAN\nASBAK!","title":"LANGIT BUKAN ASBAK. ASAP TIDAK PUNYA PASPOR.","excerpt":"Reuters melaporkan 13 Oktober 2026: kebakaran hutan dan kabut asap memicu tuntutan penanganan lebih kuat.","date":"13 OKT 2026","lead":"Kalau asap menyeberang batas, tanggung jawab pencegahan tidak boleh berhenti di batas administrasi.","paras":["FAKTA MENURUT REUTERS — Pada 13 Oktober 2026, Reuters melaporkan pemerintah Indonesia memerintahkan penambahan sumber daya penanganan kebakaran hutan di tengah meningkatnya kritik atas kabut asap. Laporan juga menyebut dampaknya pada kualitas udara regional.","Pemerintah yang menambah kapasitas pemadaman patut diapresiasi. Pada saat yang sama, publik berhak meminta data titik api, pencegahan kebakaran, pemulihan kesehatan, dan evaluasi hasil, bukan hanya berita jumlah personel yang dikerahkan.","SATIR — Kita tidak butuh paket wisata kabut asap gratis. Langit bukan asbak raksasa, dan paru-paru warga bukan filter cadangan."],"conclusion":"KEBAKARAN DIPADAMKAN. AKAR MASALAH JANGAN DIABAIKAN.","sources":[{"name":"Reuters — Indonesia pledges more resources against wildfires (13 Oktober 2026)","url":"https://www.reuters.com/business/environment/indonesias-prabowo-orders-more-resources-fight-wildfires-haze-anger-grows-2026-10-13/"}]}
 ];
-const grid=document.getElementById('article-grid');
-function el(tag,cls,text){const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node}
-function card(s){
-  const a=el('article','article-card');a.dataset.category=s.category;
-  const button=el('button');button.type='button';button.dataset.story=s.id;button.setAttribute('aria-label','Baca '+s.title);
-  const artwork=el('div','card-art '+s.color);
-  artwork.append(el('span','card-stamp','DR / '+s.sort+' / TERBIT'),el('div','card-art-text',s.art),el('div','card-bottom','DISTORSI RAKYAT / SATIR • SUMBER TERBUKA'));
-  const body=el('div','card-body');
-  body.append(el('p','card-meta',s.label+' / '+s.date),el('h3','',s.title),el('p','',s.excerpt),el('span','card-read','BACA SELENGKAPNYA ↗'));
-  button.append(artwork,body);a.append(button);return a
-}
-stories.forEach(s=>grid.append(card(s)));
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('[data-filter]').forEach(other=>{const active=other===b;other.classList.toggle('active',active);other.setAttribute('aria-pressed',String(active))});
-  document.querySelectorAll('.article-card').forEach(c=>{c.hidden=b.dataset.filter!=='semua'&&c.dataset.category!==b.dataset.filter});
-}));
-const storyDialog=document.getElementById('story-dialog');const reportDialog=document.getElementById('report-dialog');
-let selected=null;
-function openStory(id){
-  const s=stories.find(item=>item.id===id);if(!s)return;
-  selected=s;
-  document.getElementById('story-meta').textContent=s.label+' / '+s.date+' / SUMBER TERBUKA';
-  document.getElementById('story-title').textContent=s.title;
-  document.getElementById('story-lead').textContent=s.lead;
-  const body=document.getElementById('story-body');body.replaceChildren();
-  body.append(el('p','', 'PENJELASAN REDAKSI — Bagian bertanda FAKTA bersumber pada rujukan di bawah. SATIR/EDITORIAL adalah komentar redaksi, bukan tuduhan baru.'));
-  for(const paragraph of s.paragraphs)body.append(el('p','',paragraph));
-  const sourceList=document.getElementById('story-sources');sourceList.replaceChildren();
-  for(const [name,url] of s.sources){
-    const a=el('a','',name+' ↗');a.href=url;a.rel='noopener noreferrer';a.target='_blank';
-    const li=el('li');li.append(a);sourceList.append(li)
-  }
-  document.getElementById('share-status').textContent='';
-  if(!storyDialog.open)storyDialog.showModal();
-  history.replaceState(null,'','#artikel-'+s.id);
-}
-document.addEventListener('click',e=>{
-  const storyButton=e.target.closest('[data-story]');if(storyButton)openStory(storyButton.dataset.story);
-  if(e.target.closest('[data-report]'))reportDialog.showModal();
-  if(e.target.closest('[data-close-story]'))storyDialog.close();
-  if(e.target.closest('[data-close-report]'))reportDialog.close();
-});
+const grid=document.getElementById('articleGrid');
+function articleCard(story){const article=document.createElement('article');article.className='article-card';article.dataset.category=story.category;article.innerHTML=`<button type="button" data-story="${story.id}" aria-label="Baca ${story.title}"><div class="card-art ${story.color}"><div class="card-issue">DR / ${story.sort} / TERBIT</div><div class="card-art-text"></div><div class="card-bottomline">DISTORSI RAKYAT — FAKTA + SATIR / SUMBER TERBUKA</div></div><div class="card-content"><div class="card-meta"></div><h3 class="card-title"></h3><p class="card-excerpt"></p><span class="card-read">BACA SELENGKAPNYA <span>↗</span></span></div></button>`;article.querySelector('.card-art-text').textContent=story.art;article.querySelector('.card-meta').textContent=story.label+' / '+story.date;article.querySelector('.card-title').textContent=story.title;article.querySelector('.card-excerpt').textContent=story.excerpt;return article}
+stories.forEach(s=>grid.appendChild(articleCard(s)));
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{const active=button.dataset.filter;document.querySelectorAll('[data-filter]').forEach(item=>{const isActive=item===button;item.classList.toggle('active',isActive);item.setAttribute('aria-pressed',String(isActive))});document.querySelectorAll('.article-card').forEach(card=>card.hidden=active!=='semua'&&card.dataset.category!==active)}));
+const storyDialog=document.getElementById('storyDialog');let activeStory=null;
+function openStory(id){const story=stories.find(s=>s.id===id);if(!story)return;activeStory=story;document.getElementById('dialogKicker').textContent=`${story.label} / ${story.date} / FAKTA + KOMENTAR`;document.getElementById('dialogTitle').textContent=story.title;document.getElementById('dialogLead').textContent=story.lead;const body=document.getElementById('dialogBody');body.replaceChildren();const notice=document.createElement('p');notice.className='notice';notice.textContent='PENTING: Fakta peristiwa dilacak ke sumber di bawah. Sindiran dan kalimat satir adalah komentar redaksi, bukan fakta atau tuduhan baru.';body.appendChild(notice);story.paras.forEach(t=>{const p=document.createElement('p');p.textContent=t;body.appendChild(p)});const h=document.createElement('h3');h.textContent=story.conclusion;body.appendChild(h);const sourceHeading=document.createElement('h4');sourceHeading.textContent='SUMBER YANG BISA DIPERIKSA';sourceHeading.className='sources-heading';body.appendChild(sourceHeading);const sourceList=document.createElement('ul');sourceList.className='source-list';story.sources.forEach(src=>{const li=document.createElement('li');const a=document.createElement('a');a.textContent=src.name+' ↗';a.href=src.url;a.target='_blank';a.rel='noopener noreferrer';li.appendChild(a);sourceList.appendChild(li)});body.appendChild(sourceList);document.getElementById('shareStatus').textContent='';storyDialog.showModal();history.replaceState(null,'',`#artikel-${id}`)}
+document.addEventListener('click',e=>{const storyBtn=e.target.closest('[data-story]');if(storyBtn)openStory(storyBtn.dataset.story);if(e.target.closest('[data-close-story]'))storyDialog.close();if(e.target.closest('[data-close-report]'))reportDialog.close();if(e.target.closest('[data-open-report]'))reportDialog.showModal()});
 storyDialog.addEventListener('close',()=>{if(location.hash.startsWith('#artikel-'))history.replaceState(null,'','#arsip')});
+const reportDialog=document.getElementById('reportDialog');
 for(const d of [storyDialog,reportDialog])d.addEventListener('click',e=>{if(e.target===d)d.close()});
-document.getElementById('share-story').addEventListener('click',async()=>{
-  if(!selected)return;const url=new URL(location.href);url.hash='artikel-'+selected.id;const status=document.getElementById('share-status');
-  try{
-    if(navigator.share)await navigator.share({title:selected.title,url:url.href});
-    else if(navigator.clipboard){await navigator.clipboard.writeText(url.href);status.textContent='TAUTAN DISALIN.'}
-    else status.textContent=url.href;
-  }catch(e){if(e.name!=='AbortError')status.textContent='GAGAL BERBAGI. SALIN ALAMAT HALAMAN.'}
-});
-const toggle=document.getElementById('menu-toggle'),nav=document.getElementById('main-nav');
-toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Tutup menu':'Buka menu')});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
-document.getElementById('report-form').addEventListener('submit',e=>{
-  e.preventDefault();
-  const val=id=>document.getElementById(id).value.trim();
-  const draft=['DISTORSI RAKYAT — DRAF LAPORAN WARGA','STATUS: DRAF PRIBADI. BELUM TERKIRIM.','','Kategori: '+val('cat'),'Judul: '+val('title'),'Waktu/lokasi: '+val('place'),'','Kronologi:',val('details'),'','Bukti: '+val('evidence'),'','Periksa lagi sebelum disampaikan. Hindari data pribadi yang tidak perlu.'].join('\n');
-  const url=URL.createObjectURL(new Blob([draft],{type:'text/plain;charset=utf-8'}));
-  const a=el('a');a.href=url;a.download='distorsi-rakyat-draf.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
-  document.getElementById('report-status').textContent='DRAF DIUNDUH. TIDAK DIKIRIM KE REDAKSI.'
-});
+document.getElementById('shareStory').addEventListener('click',async()=>{if(!activeStory)return;const url=new URL(location.href);url.hash='artikel-'+activeStory.id;const target=url.toString();const status=document.getElementById('shareStatus');try{if(navigator.share){await navigator.share({title:activeStory.title,url:target})}else if(navigator.clipboard){await navigator.clipboard.writeText(target);status.textContent='TAUTAN DISALIN.'}else{status.textContent=target}}catch(err){if(err.name!=='AbortError')status.textContent='GAGAL BERBAGI. SALIN ALAMAT HALAMAN.'}});
+const menuToggle=document.getElementById('menuToggle'),nav=document.getElementById('navigasi');menuToggle.addEventListener('click',()=>{const isOpen=nav.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(isOpen));menuToggle.setAttribute('aria-label',isOpen?'Tutup navigasi':'Buka navigasi')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false')}));
+document.getElementById('reportForm').addEventListener('submit',e=>{e.preventDefault();const category=document.getElementById('reportCategory').value,title=document.getElementById('reportTitleInput').value.trim(),where=document.getElementById('reportLocation').value.trim(),detail=document.getElementById('reportStory').value.trim(),evidence=document.getElementById('reportEvidence').value.trim();const fileText=['DISTORSI RAKYAT — DRAF LAPORAN WARGA','STATUS: DRAF PRIBADI, BELUM TERKIRIM','',`Kategori: ${category}`,`Judul: ${title}`,`Waktu / lokasi: ${where||'Belum diisi'}`,'','Kronologi dan sumber:',detail,'',`Tautan bukti: ${evidence||'Tidak ada'}`,'','CATATAN: Verifikasi data sebelum dikirim ke redaksi. Jangan memuat data pribadi sensitif tanpa persetujuan.'].join('\n');const blob=new Blob([fileText],{type:'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download='distorsi-rakyat-draf-laporan.txt';document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);document.getElementById('reportStatus').textContent='DRAF DIUNDUH KE PERANGKAT. BELUM TERKIRIM KE REDAKSI.'});
 document.getElementById('year').textContent=new Date().getFullYear();
-if(location.hash.startsWith('#artikel-'))openStory(decodeURIComponent(location.hash.slice(9)));
+const deepLink=decodeURIComponent(location.hash.slice(1));if(deepLink.startsWith('artikel-')){openStory(deepLink.slice(7))}
