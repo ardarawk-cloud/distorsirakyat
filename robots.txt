@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://distorsirakyat.nadmo.id/sitemap.xml
