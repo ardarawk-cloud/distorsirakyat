@@ -1,0 +1,72 @@
+/* Back to the original DISTORSI RAKYAT visual direction.
+   October 2026: restores split-screen hero, compact two-line identity,
+   striped red protest art and original poster-card treatment.
+   Content, citations, links and functionality continue to use v0.4. */
+:root{--black:#151411;--red:#f02c39;--paper:#f1eadc;--white:#f4ede2;--acid:#dfff4c}
+.announcement{min-height:31px;font-size:10px;letter-spacing:.05em}
+.site-header.wrap{max-width:none;padding:18px 3%;min-height:91px;gap:30px;border-bottom:1px solid #c5beb7}
+.brand{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;font-style:italic;font-size:clamp(30px,2.75vw,45px);letter-spacing:-.04em;line-height:.85;transform:rotate(-2deg)}
+.brand strong{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;font-style:italic;font-weight:900}
+.brand-bang{color:var(--paper)!important}
+.site-header nav a{font-size:11px;letter-spacing:.03em}
+.top-cta{background:var(--paper);font-size:11px;padding:16px 20px;transform:rotate(1deg)}
+.top-cta:hover{background:var(--acid)}
+.hero.wrap{max-width:none;padding:0;margin:0;display:grid;grid-template-columns:52.45% 47.55%;gap:0;min-height:750px;align-items:stretch}
+.hero-copy{padding:clamp(55px,5vw,88px) clamp(35px,5.25vw,100px) 58px clamp(38px,7.6vw,150px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.stamp{border:1px solid #a5a091;transform:rotate(-2deg);background:#1c1b18;padding:12px 15px;color:var(--paper);font-size:9px;letter-spacing:.07em;margin:0 0 32px}
+.micro{letter-spacing:.14em}
+.hero-copy>.micro{color:var(--paper);margin:0 0 15px;font-size:11px}
+.hero-copy>.micro:before{content:'◆';display:inline-block;color:var(--red);margin-right:13px;transform:rotate(-15deg)}
+.hero h1{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;font-size:clamp(70px,8.4vw,142px);font-style:normal;letter-spacing:-.025em;line-height:.91;max-width:760px;margin:0 0 53px;overflow:visible}
+.hero h1 em{display:block;letter-spacing:-.055em;transform:none;font-style:italic;line-height:.88;text-shadow:-5px 5px 0 #0a0a0a}
+.hero h1 em span{display:inline-block;color:var(--paper);transform:translate(-5px,18px) rotate(16deg)}
+.hero h2{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;font-size:clamp(29px,3.2vw,55px);letter-spacing:0;line-height:1.02;margin:0 0 20px;max-width:660px}
+.hero h2 mark{background:none;color:var(--acid);padding:0}
+.hero-desc{max-width:530px;font-size:14px;line-height:1.85;color:#d8d2c8}
+.actions{margin:23px 0 32px}
+.hero-foot{margin-top:10px}
+.hero-art{border:0;margin:0;box-shadow:none;transform:none;min-height:760px;background:#f02c39;overflow:hidden}
+.hero-art:before{z-index:0;background:repeating-linear-gradient(163deg,transparent 0 21px,#00000026 22px 23px),radial-gradient(#fff2 1px,transparent 1px);background-size:auto,4px 4px}
+.hero-art:after{content:'★';font:420px/1 Impact,sans-serif;color:#130e1030;right:-130px;top:-60px;transform:rotate(-15deg);z-index:0}
+.art-ribbon{position:absolute;z-index:2;left:4%;top:38px;transform:none;background:transparent;font:900 14px/1.25 'Space Mono',monospace;color:#151414;max-width:230px;padding:0;white-space:normal}
+.megaphone{left:19%;top:30%;transform:rotate(-17deg) scale(1.48);z-index:2;filter:drop-shadow(9px 11px 0 #100d0c)}
+.megaphone .cone{background:#f7f1e6;border:0;clip-path:polygon(0% 32%,85% 0%,85% 100%,0 68%)}
+.megaphone .mouth{background:#f7f1e6;border:12px solid #171411}
+.megaphone .handle{background:#191411}
+.megaphone .echo{color:#f4ede2;right:-60px}
+.hero-art-text{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;transform:rotate(-7deg);color:#f5ebda;font-style:italic;font-size:clamp(75px,10vw,155px);line-height:.78;left:8%;right:3%;bottom:36px;text-shadow:5px 6px 0 #101010, -3px -2px 0 #101010;-webkit-text-stroke:2px #151311}
+.hero-art-text span{color:var(--paper)}
+.hero-art-foot{left:auto;right:0;bottom:0;width:auto;transform:rotate(-90deg) translate(100%,0);transform-origin:bottom right;white-space:nowrap;background:none;color:#eee;font-size:9px}
+.ticker{font-family:Impact,'Arial Narrow',sans-serif;transform:none;padding:11px 0}
+.section-line{font-size:11px}
+.feature{padding-top:95px}
+.blackout-poster{box-shadow:10px 10px #070707}
+.archive{background:#151411}
+.card-art{background-image:repeating-linear-gradient(-12deg,transparent 0 17px,#0002 18px 19px)}
+.card-art:after{content:'✳';right:7px;top:55px;font-size:205px;color:#1112}
+.card-art-text{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;font-size:clamp(43px,4.3vw,65px);letter-spacing:-.035em;line-height:.9;transform:rotate(-2deg)}
+.card-body h3{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;letter-spacing:-.025em}
+@media(max-width:900px){
+.site-header.wrap{padding:19px 5%}
+.hero.wrap{grid-template-columns:1fr;min-height:0}
+.hero-copy{padding:70px 7% 65px}
+.hero h1{font-size:clamp(72px,14vw,125px);margin-bottom:34px}
+.hero h2{font-size:clamp(36px,6.3vw,60px)}
+.hero-art{min-height:610px}
+.hero-art-text{font-size:clamp(92px,15vw,145px);bottom:55px}
+.megaphone{top:23%;left:26%}
+}
+@media(max-width:570px){
+.announcement{padding:8px 5%}
+.site-header.wrap{min-height:78px}
+.brand{font-size:32px}
+.hero-copy{padding:51px 6.5% 52px}
+.hero h1{font-size:clamp(63px,15.5vw,95px);line-height:.9;margin-bottom:34px}
+.hero h2{font-size:clamp(26px,7vw,39px);margin-bottom:20px}
+.hero-art{min-height:520px}
+.hero-art-text{font-size:clamp(82px,18vw,125px);bottom:65px}
+.megaphone{left:10%;top:21%;transform:scale(1.14) rotate(-17deg)}
+.art-ribbon{font-size:11px}
+.hero-art-foot{display:none}
+.card-art-text{font-size:62px}
+}
