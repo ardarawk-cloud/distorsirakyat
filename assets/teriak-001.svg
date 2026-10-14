@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+<title id="title">DISTORSI RAKYAT TERIAK! #001 — Pulau Surga, Air Bersih Jangan Mewah</title>
+<desc id="desc">Poster punk satir Bali: data BPBD Bali menunjukkan 4.541 kepala keluarga terdampak kekeringan September 2026. Ilustrasi air menetes dari keran dan tanah pecah berlatar panorama wisata.</desc>
+<defs>
+<pattern id="noise" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M1 8h3M13 21h2M26 2h3M31 29h2M8 33h1" stroke="#131211" stroke-width="1.7" opacity=".17"/></pattern>
+<pattern id="shreds" width="110" height="110" patternUnits="userSpaceOnUse"><path d="M0 18L110 4M-5 83L105 71M24 110L95 99" stroke="#110f0d" stroke-width="2.3" opacity=".13"/></pattern>
+<clipPath id="frame"><rect width="900" height="1200"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="900" height="1200" fill="#11100e"/>
+<path d="M31 57 868 10 882 119 12 154Z" fill="#f2eade"/>
+<path d="M28 52 861 29" stroke="#f02e34" stroke-width="15"/>
+<text x="47" y="115" fill="#12100e" font-family="Impact,Arial Black,sans-serif" font-weight="900" font-size="47">DISTORSI RAKYAT</text>
+<text x="626" y="113" fill="#e52931" font-family="Impact,Arial Black,sans-serif" font-weight="900" font-size="46">TERIAK! 001</text>
+<g transform="rotate(-3 444 350)">
+<rect x="-22" y="165" width="949" height="183" fill="#f1e9db"/>
+<text x="39" y="297" fill="#10100e" font-family="Impact,Arial Black,sans-serif" font-size="141" font-weight="900" letter-spacing="-6">PULAU SURGA.</text>
+<rect x="-15" y="328" width="931" height="165" fill="#e92731"/>
+<text x="38" y="451" fill="#f5eee3" font-family="Impact,Arial Black,sans-serif" font-size="122" font-weight="900" letter-spacing="-3">AIR BERSIH</text>
+<rect x="-19" y="485" width="941" height="169" fill="#f3ecdf"/>
+<text x="38" y="615" fill="#11100e" font-family="Impact,Arial Black,sans-serif" font-size="104" font-weight="900" letter-spacing="-3">JANGAN MEWAH!</text>
+</g>
+<path d="M0 660H900V1040H0Z" fill="#ded7c8"/>
+<path d="M0 660H900V1040H0Z" fill="url(#shreds)"/>
+<circle cx="722" cy="804" r="125" fill="#e92731"/>
+<path d="M0 854Q153 781 254 831T490 825T900 817V1040H0Z" fill="#716b62"/>
+<path d="M0 893Q129 853 210 884T400 896T640 869T900 874V1040H0Z" fill="#2f2b29"/>
+<g fill="#131211">
+<path d="M81 870h19v-103l-43-31 48 25 7-58 8 58 40-28-41 35v105H81Z"/>
+<path d="M180 899h13v-93l-33-21 37 18 7-47 6 44 35-23-35 33v92H180Z"/>
+<path d="M299 876h20v-125l-49-28 55 21 8-52 9 53 47-28-46 37v126h-44Z"/>
+<rect x="36" y="887" width="338" height="17" fill="#11100e"/>
+<path d="M370 898h220l-54-109h-118Z" fill="#e7dfd0"/>
+<path d="M402 817h152v72H402Z" fill="#f4eee5"/>
+<path d="M422 835h26v36h-26m42-36h26v36h-26m42-36h26v36h-26" fill="#23201c"/>
+<path d="M410 812l65-55 76 55Z" fill="#141210"/>
+</g>
+<path d="M0 1014 92 984 183 1005 270 970 371 1008 488 966 582 997 667 978 758 1011 900 976V1130H0Z" fill="#161412"/>
+<path d="m0 1014 93 41 104-39 63 32 80-20 108 39 122-45 98 31 101-43 131 31" fill="none" stroke="#f1e9db" stroke-width="6"/>
+<path d="m90 987 12 52-38 52m212-112 20 64 43 33m137-101-11 67-55 45m256-107-31 67 48 46m110-106-7 55 57 35" fill="none" stroke="#f1e9db" stroke-width="6"/>
+<g transform="translate(666 688) rotate(12)">
+<path d="M15 85h108v43H62v72h-40v-72H15Z" stroke="#f4eddf" stroke-width="15" fill="#171513"/>
+<path d="M122 73c0-42 54-42 54 0v47" stroke="#171513" stroke-width="26" fill="none"/>
+<path d="M148 116h56" stroke="#171513" stroke-width="26"/>
+<path d="M155 173c-8 17-17 29-17 37a17 17 0 0 0 34 0c0-10-9-23-17-37Z" fill="#e92731"/>
+</g>
+<rect x="25" y="665" width="515" height="158" fill="#e92731" transform="rotate(-2 25 665)"/>
+<text x="45" y="730" fill="#fff5e5" font-family="Impact,Arial Black,sans-serif" font-size="86" font-weight="900">4.541 KK</text>
+<text x="45" y="776" fill="#fff5e5" font-family="Arial Black,Arial,sans-serif" font-size="26" font-weight="900">TERDAMPAK KEKERINGAN</text>
+<text x="46" y="805" fill="#fff5e5" font-family="Courier New,monospace" font-size="21" font-weight="700">BALI • SEPTEMBER 2026 • BPBD BALI</text>
+<path d="M15 1035 879 1021 899 1119 10 1142Z" fill="#e9f34e"/>
+<text x="38" y="1077" fill="#12110e" font-family="Impact,Arial Black,sans-serif" font-size="49" font-weight="900">PARIWISATA BERKILAU.</text>
+<text x="38" y="1120" fill="#12110e" font-family="Impact,Arial Black,sans-serif" font-size="42" font-weight="900">KRAN WARGA HARUS MENGALIR.</text>
+<rect y="1150" width="900" height="50" fill="#090909"/>
+<text x="38" y="1181" fill="#f3ecdf" font-family="Courier New,monospace" font-size="20" font-weight="700">SATIR / FAKTA BERSUMBER / DISTORSIRAKYAT.NADMO.ID</text>
+<rect width="900" height="1200" fill="url(#noise)"/>
+</g></svg>
