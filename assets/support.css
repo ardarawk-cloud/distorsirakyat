@@ -1,0 +1,20 @@
+/* DISTORSI RAKYAT — community support, isolated from approved original theme. */
+.main-nav a[href="#dukung"] { color:var(--acid,#dafa50); }
+.main-nav a[href="#dukung"]:hover,
+.main-nav a[href="#dukung"]:focus-visible { text-decoration:underline; text-underline-offset:5px; }
+.support-section { background:#171612; color:var(--paper,#f3eee2); padding:74px 0 85px; border-top:4px solid var(--acid,#dafa50); border-bottom:1px solid #514b40; }
+.support-section .support-layout { display:grid; grid-template-columns:minmax(270px,.9fr) minmax(300px,1.1fr); gap:clamp(24px,5vw,80px); align-items:center; }
+.support-section .support-art { min-height:410px; padding:38px clamp(24px,3vw,42px); background:var(--acid,#dafa50); color:#11100e; border:7px solid #171612; box-shadow:11px 11px 0 var(--red,#ee2c32); transform:rotate(-1deg); display:flex; flex-direction:column; justify-content:space-between; overflow:hidden; position:relative; isolation:isolate; }
+.support-section .support-art::before { content:"✳"; font:340px/.8 Impact,Haettenschweiler,sans-serif; color:#14131022; position:absolute; right:-45px; top:38px; transform:rotate(-14deg); z-index:-1; }
+.support-section .support-stamp { display:inline-block; align-self:start; background:#10100e; color:#f3eee2; font:900 14px/1.3 "Courier New",monospace; padding:12px 14px; transform:rotate(-4deg); }
+.support-section .support-art strong { font:900 clamp(45px,5vw,80px)/.9 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; letter-spacing:-.025em; position:relative; }
+.support-section .support-art small { border-top:3px solid #11100e; padding-top:12px; font:900 13px/1.4 "Courier New",monospace; }
+.support-section .support-eyebrow { font:900 12px/1.5 "Courier New",monospace; color:var(--red,#ee2c32); margin:0 0 17px; letter-spacing:.05em; }
+.support-section h2 { font:900 clamp(41px,5vw,76px)/.96 Impact,Haettenschweiler,"Arial Narrow Bold",sans-serif; letter-spacing:-.02em; margin:0 0 25px; }
+.support-section h2 span { color:var(--acid,#dafa50); }
+.support-section .support-copy p:not(.support-eyebrow) { font-size:16px; line-height:1.7; color:#e0d9cf; max-width:610px; margin:0 0 18px; }
+.support-section .support-link { display:inline-flex; align-items:center; justify-content:center; gap:22px; min-height:55px; margin:16px 0 15px; padding:14px 22px; background:var(--red,#ee2c32); border:2px solid var(--red,#ee2c32); text-decoration:none; color:#0c0c0b; font:900 14px/1.4 "Courier New",monospace; text-align:center; }
+.support-section .support-link:hover,.support-section .support-link:focus-visible { background:var(--acid,#dafa50); border-color:var(--acid,#dafa50); color:#10100e; }
+.support-section .support-copy p.support-note { color:#aba497; font-size:12px; line-height:1.7; }
+.footer a[href="#dukung"] { color:var(--acid,#dafa50); }
+@media(max-width:780px){ .support-section{padding:55px 0 70px}.support-section .support-layout{grid-template-columns:1fr;gap:39px}.support-section .support-art{min-height:295px;max-width:550px;box-shadow:7px 7px 0 var(--red,#ee2c32)}.support-section .support-art strong{font-size:clamp(50px,12vw,76px)}.support-section h2{font-size:clamp(44px,10vw,70px)}.support-section .support-link{width:100%;max-width:440px} }
