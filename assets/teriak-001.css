@@ -1,0 +1,22 @@
+/* TERIAK! #001 — additive editorial spotlight. Original v0.3 CSS untouched. */
+.teriak-spotlight{position:relative;background:#12110f;padding:72px 0 85px;border-top:2px solid #ee2c32;border-bottom:2px solid #484037}
+.teriak-spotlight .teriak-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:27px;font:900 12px/1.4 'Courier New',monospace;color:#dafa50;letter-spacing:.03em}
+.teriak-spotlight .teriak-heading span:last-child{color:#bfb7aa}
+.teriak-spotlight .teriak-layout{display:grid;grid-template-columns:minmax(280px,520px) minmax(280px,1fr);gap:clamp(25px,5vw,80px);align-items:center}
+.teriak-spotlight .teriak-art{display:block;border:7px solid #e5ddca;box-shadow:10px 10px 0 #050505;line-height:0;background:#101010}
+.teriak-spotlight .teriak-art img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+.teriak-spotlight .teriak-art:focus-visible{outline:3px solid #dafa50;outline-offset:5px}
+.teriak-spotlight .teriak-kicker{font:900 12px/1.5 'Courier New',monospace;color:#ee2c32;margin:0 0 18px;letter-spacing:.06em}
+.teriak-spotlight h2{font:900 clamp(37px,5vw,77px)/.95 Impact,Haettenschweiler,'Arial Narrow Bold',sans-serif;text-transform:uppercase;color:#f3eee2;letter-spacing:-.017em;margin:0 0 24px}
+.teriak-spotlight h2 span{color:#ee2c32}
+.teriak-spotlight p:not(.teriak-kicker){color:#dad3c5;max-width:610px;font-size:16px;line-height:1.8}
+.teriak-spotlight .teriak-number{background:#dafa50;color:#16120e;font-weight:900;padding:2px 6px}
+.teriak-spotlight .teriak-credits{display:flex;gap:12px;flex-wrap:wrap;padding-top:18px;margin:24px 0 29px;border-top:1px solid #645d52;font:700 11px/1.45 'Courier New',monospace;color:#dafa50}
+.teriak-spotlight .teriak-actions{display:flex;gap:12px;flex-wrap:wrap}
+.teriak-spotlight .teriak-button{border:2px solid #ee2c32;background:#ee2c32;color:#11100e;display:inline-flex;align-items:center;gap:17px;min-height:47px;padding:12px 15px;text-decoration:none;font:900 12px/1.35 'Courier New',monospace}
+.teriak-spotlight button.teriak-button{cursor:pointer}
+.teriak-spotlight .teriak-button.secondary{background:transparent;color:#f3eee2;border-color:#f3eee2}
+.teriak-spotlight .teriak-button:hover,.teriak-spotlight .teriak-button:focus-visible{background:#dafa50;color:#11100e;border-color:#dafa50}
+.teriak-spotlight .teriak-source{font:700 11px/1.5 'Courier New',monospace;color:#d6cec3;display:block;margin-top:20px}
+.teriak-spotlight .teriak-source a{color:#dafa50;text-decoration:underline}
+@media(max-width:760px){.teriak-spotlight{padding:50px 0 62px}.teriak-spotlight .teriak-heading{align-items:start;font-size:10px;flex-direction:column}.teriak-spotlight .teriak-layout{grid-template-columns:1fr;gap:40px}.teriak-spotlight .teriak-art{width:min(100%,475px);justify-self:center}.teriak-spotlight h2{font-size:clamp(44px,10vw,65px)}}
